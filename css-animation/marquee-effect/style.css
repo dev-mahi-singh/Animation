@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    background-color: #252525;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marque-wrapper{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.marque-track{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(7, 7, 115);
+    flex-shrink: 0;
+    animation: marque-animation 5.3s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    gap: 3rem;
+}
+
+.marque-track img{
+    height: 90%;
+    object-fit: cover;
+}
+
+@keyframes marque-animation {
+    from{
+        transform:translateX(0%);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}

@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 600px;
+    background-color: rgb(95, 61, 61);
+}
+
+.card{
+    height: 500px;
+    width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    transform: rotateY(45deg);
+}
+
+.card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
