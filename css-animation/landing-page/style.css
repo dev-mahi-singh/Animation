@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shojumaru&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+h1,
+h2,
+span {
+    font-family: "Google Sans", sans-serif;
+}
+
+h3,
+h4,
+p {
+    font-family: "Lato", sans-serif;
+}
+
+.landing-page {
+    height: 120vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(39, 20, 113);
+}
+
+.top-section {
+    height: 55%;
+    width: 100%;
+    background-color: #FD1C00;
+}
+
+.top-section nav {
+    height: 35%;
+    width: 100%;
+    display: flex;
+    padding: 0 2rem;
+}
+
+.top-section nav .nav-left {
+    height: 100%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    gap: 0.2rem;
+    color: whitesmoke;
+}
+
+.nav-links {
+    cursor: pointer;
+    position: relative;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    animation: landing-para-animation 1.8s ease-out;
+}
+
+.nav-links::before {
+    content: "";
+    height: 10%;
+    width: 0.7vw;
+    background-color: whitesmoke;
+    transition: width 0.2s ease-out;
+}
+
+.nav-links:hover::before {
+    width: 2vw;
+    transform-origin: left;
+}
+
+.nav-links h3 {
+    font-size: 1.15rem;
+}
+
+.top-section nav .nav-right {
+    height: 100%;
+    width: 35%;
+    padding-top: 1rem;
+}
+
+.nav-right p {
+    font-size: 1rem;
+    color: whitesmoke;
+    width: 20ch;
+    margin-bottom: 0.6rem;
+    animation: landing-para-animation 1.8s ease-out;
+}
+
+@keyframes landing-para-animation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.top-section .heading {
+    height: 65%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    overflow: hidden;
+}
+
+.top-section .heading h1 {
+    font-size: 12rem;
+    color: whitesmoke;
+    font-weight: 500;
+    line-height: 0.9;
+    animation: landing-text-animation 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes landing-text-animation {
+    from {
+        transform: translateY(120%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.bottom-section {
+    height: 45%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bottom-section img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: scale 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: landing-image-animation 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.bottom-section:hover img {
+    scale: 1.15;
+}
+
+@keyframes landing-image-animation {
+    from {
+        scale: 1.8;
+    }
+
+    to {
+        scale: 1;
+    }
+}
+
+.list-page {
+    height: 100vh;
+    width: 100%;
+    padding: 2rem 2rem;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.list-div {
+    display: flex;
+    height: 20vh;
+    width: 100%;
+    border-top: 2px solid rgb(95, 94, 94);
+    transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.list-number {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    align-items: center;
+}
+
+.list-number h2 {
+    font-size: 10rem;
+    line-height: 0.7;
+    font-weight: 400;
+    letter-spacing: -0.8rem;
+}
+
+.list-info {
+    height: 100%;
+    width: 45%;
+    display: flex;
+    padding: 0.5rem 0rem;
+}
+
+.list-description {
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.list-description p {
+    font-size: 1rem;
+    line-height: 1.1;
+    text-wrap: balance;
+}
+
+.list-description h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.list-img {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.list-img img {
+    height: 100%;
+    width: 45%;
+    object-fit: cover;
+    transform: translateY(120%);
+    transition: transform 0.37s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.list-div:hover .list-img img {
+    transform: translateY(0%);
+}
+
+.list-div:hover {
+    background-color: #FD1C00;
+    color: whitesmoke;
+}
+
+.marque-section {
+    height: 35vh;
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 2rem 0;
+    display: flex;
+    overflow: hidden;
+}
+
+.marque-track {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-shrink: 0;
+    animation: marque-animation 8s linear infinite;
+}
+
+.marque-track img {
+    height: 100%;
+    width: calc(100% / 6);
+    object-fit: cover;
+}
+
+@keyframes marque-animation {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+footer {
+    height: 100vh;
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 2rem 2rem;
+     overflow: hidden;
+}
+
+.footer-top {
+    height: 65%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.footer-top-div {
+    height: 100%;
+    width: 35%;
+}
+
+.footer-image-div {
+    height: 75%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.footer-top-div .footer-image-div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: saturate(0);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.footer-image-div:hover img {
+    transform: scale(1.25);
+    filter: saturate(100%);
+}
+
+.footer-description {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+}
+
+.footer-description p {
+    font-size: 1rem;
+    width: 40ch;
+    text-wrap: balance;
+}
+
+.footer-bottom{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.footer-bottom h2{
+    font-size: 18rem;
+    transition: color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+    line-height: 1;
+}
+
+.footer-bottom h2:hover{
+    color: #FD1C00;
+}
