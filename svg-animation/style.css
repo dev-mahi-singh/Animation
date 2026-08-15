@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background-color: #010101;
+}
+
+.signature {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: svg-path-animation 1.7s ease-out infinite alternate;
+}
+
+@keyframes svg-path-animation {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
